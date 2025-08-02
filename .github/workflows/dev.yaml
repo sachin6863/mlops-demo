@@ -3,7 +3,7 @@ name: Azure ML Batch Inference Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   run-batch-inference:
