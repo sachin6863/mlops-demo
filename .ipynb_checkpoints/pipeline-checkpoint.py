@@ -18,7 +18,7 @@ ml_client = MLClient(
 
 # Environment (built-in or custom)
 env = Environment(
-    name="sklearn-env-3",
+    name="sklearn-env-4",
     image="mcr.microsoft.com/azureml/minimal-py312-inference:latest",
     conda_file='conda.yaml',
     version="1",
