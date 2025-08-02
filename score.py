@@ -20,6 +20,7 @@ model = joblib.load(os.path.join(args.model_path, "model.pkl"))
 
 # Predict
 df["prediction"] = model.predict(df)
+print(df["prediction"])
 
 # Save output
 os.makedirs(args.output_data, exist_ok=True)
