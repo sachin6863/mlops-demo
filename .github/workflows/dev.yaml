@@ -1,4 +1,4 @@
-name: Run Azure ML Batch Inference Pipeline
+name: Azure ML Batch Inference Pipeline
 
 on:
   push:
