@@ -1,0 +1,31 @@
+name: Run Azure ML Batch Inference Pipeline
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  trigger-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Install dependencies
+        run: |
+          pip install azure-ai-ml azure-identity
+
+      - name: Run Azure ML Pipeline
+        run: |
+          python pipeline.py
