@@ -5,7 +5,7 @@ from azure.ai.ml.constants import AssetTypes
 import os
 
 # Define Azure ML workspace info
-subscription_id = '116fc71b-abc0-49b8-8d08-802c398560a1'
+subscription_id = 'b2edcb47-b072-4fba-abb1-c36413250d5f'
 resource_group = 'mlops-rg'
 workspace = 'mlops-ws'
 
